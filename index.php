@@ -38,6 +38,17 @@ include 'connect.php';
             $result = mysqli_query($con,$sql);
             $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
             $_SESSION['id'] = $row['id'];
+
+            //add user_id to shopping_sessions
+            $user_id = $row['id'];
+            $sql = "INSERT INTO shopping_sessions (user_id) VALUES($user_id)";
+            $rseult = mysqli_query($con,$sql);
+
+            
+            $sql = "SELECT id FROM shopping_sessions WHERE user_id = $user_id";
+            $rseult = mysqli_query($con,$sql);
+            $row = mysqli_fetch_array($rseult);
+            $_SESSION['session_id'] = $row['id'];
             
             header('location:home.php');
         }else {

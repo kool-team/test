@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,14 +17,14 @@
         <h1>PIZZA HUT SMALL</h1>
         <div class="product" >
         <img src="" class="img-thumbnail">       
-        <button class="btn btn-primary" onclick="f(1)" name="product" value="prod1">
+        <button class="btn btn-primary" onclick="f('PIZZA HUT SMALL')" name="product" value="prod1">
         Add To card
     </button>
         </div>
         <h1>burger</h1>
         <div class="product" class="img-thumbnail">
         <img src="" >       
-        <button class="btn btn-primary" onclick="f(2)"value="burger">
+        <button class="btn btn-primary" onclick="f('burger')"value="burger">
         Add To card
     </button>
         </div>
@@ -41,7 +42,7 @@
           echo $var2;
         ?>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         $(function(){
             $("button").on("click",function(){
@@ -65,7 +66,7 @@
                 })
             })
         })
-    </script> -->
+    </script>
 
     </div>
   </body>
